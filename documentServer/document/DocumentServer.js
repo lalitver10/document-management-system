@@ -13,6 +13,7 @@ router.get('/document/:processName',(req,res)=>{
     var req=http.request(options,(result)=>{
         console.log(result.statusCode)
         //Removed options from logic 
+        console.log(url,'For urls')
          res.status(result.statusCode);
 		 res.set(result.headers);
 		result.pipe(res);
