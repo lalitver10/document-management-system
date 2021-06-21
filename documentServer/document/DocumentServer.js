@@ -12,7 +12,7 @@ router.get('/document/:processName',(req,res)=>{
     };
     var req=http.request(options,(result)=>{
         console.log(result.statusCode)
-         console.log(options)
+        //Removed options from logic 
          res.status(result.statusCode);
 		 res.set(result.headers);
 		result.pipe(res);
